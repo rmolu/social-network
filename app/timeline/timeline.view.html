@@ -1,0 +1,25 @@
+<navigation></navigation>
+
+<div class="col-xs-10 col-xs-offset-1">
+    <div class="row">
+        <textarea ng-model="vm.newChitchat" class="form-control" placeholder="Write chitchat">
+        </textarea>
+        <button class="btn btn-default" ng-click="vm.sendChitchat()">Send</button>
+    </div>
+
+    <div class="row">
+        <table class="chitchat-section">
+            <tr>
+                <a ng-if="vm.incomingChitchats.length > 0" ng-click="vm.setNewChitchats()">There are {{vm.difference}} new chitchats</a>
+            </tr>
+            <tr ng-repeat="chitchat in vm.chitchats">
+                <td><strong>{{chitchat.user}}</strong>
+                    <br>
+                    <strong>{{chitchat.date | date: 'MM/dd/yyyy hh:mm'}}</strong>
+                    <br>
+                    <p>{{chitchat.content}}</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

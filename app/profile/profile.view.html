@@ -1,0 +1,27 @@
+<navigation></navigation>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-6">
+
+            <h1 class="form-signin-heading">Your profile</h1>
+
+            <image ng-src="{{vm.user.image}}" class="img-responsive">
+
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Username</label>
+                        <p class="form-control-static">{{ vm.user.username }}</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Email</label>
+                        <p class="form-control-static">{{ vm.user.email }}</p>
+                    </div>
+                    <button class="btn btn-default" ui-sref="editProfile">Edit profile</button>
+                </form>
+
+        </div>
+
+    </div>
+</div>
